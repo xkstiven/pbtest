@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link href="images/appicon.png" type="image/x-icon" rel="shortcut icon"/>
+		<title>pruaba_powerclient</title>
+		<style>
+		    body
+		    {
+		        position:absolute;
+		        width:100%;
+		        height:100%;
+		        overflow:hidden;
+		        margin:0;
+		    }
+		</style>
+	</head>
+    <body onload="onLoad();">
+        <script type="text/javascript">
+            function onLoad() {
+                var appStartupMentod = 0;
+                var l1Iframe = window.document.getElementById("L1Iframe");
+                if (0 == appStartupMentod) {
+                    l1Iframe.src = "manual.html"
+                }
+                else {
+                    l1Iframe.src = "auto.html"
+                }
+            }
+            function getUrl() {
+                return window.location.href;
+            }
+	    </script>
+		<iframe name="L1Iframe" id="L1Iframe" frameborder="0" scrolling="no" style="width:100%;height:100%;">
+            <p>The Web page uses iframe while the current browser does not support iframe, therefore please upgrade your browser or change to a browser that supports iframe.</p>
+        </iframe>
+    </body>
+</html>
+

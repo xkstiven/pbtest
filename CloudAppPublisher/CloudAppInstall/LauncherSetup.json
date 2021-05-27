@@ -1,0 +1,16 @@
+{
+	"format": "1.0",
+	"package": "CloudAppLauncher_Installer.exe",
+	"mode": 0,
+	"checkcode": "42709c3e",
+	"cloudappshell": {
+		   "version": "19.2.0.2703",
+		   "minver": "19.2.0.2703",
+		   "updatemode": 2
+	},
+	"cloudappservice": {
+		   "version": "19.2.0.2703",
+		   "minver": "19.2.0.2703",
+		   "updatemode": 2
+	}
+}

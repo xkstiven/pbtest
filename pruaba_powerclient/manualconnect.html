@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+
+	<body onload="openPBApp();">
+        <img id="img" style="display:none;" onerror="onLoadImageError();" onload="onLoadImageFinish();"/>
+	    <script type="text/javascript">
+	        function getUrl() {
+	            return window.parent.getUrl();
+	        }
+
+	        function openPBApp() {
+	            var img = document.getElementById("img");
+	            img.src = "http://127.0.0.1:26569/Setup.ico/" + getUrl();
+	        }
+
+	        function connect() {
+	            window.location.reload();
+	        }
+
+            function onLoadImageFinish() {
+                window.parent.document.title = "";
+                window.parent.document.location.href = "about:blank";
+             }
+
+             function onLoadImageError() {
+                 // Try to connect to the server again.
+                 setTimeout("connect()", 100);
+             }
+		</script> 
+	</body>
+</html>
+
